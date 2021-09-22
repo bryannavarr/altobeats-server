@@ -8,7 +8,15 @@ function connect(url) {
   connection = mysql.createConnection(url);
   connection.connect();
   connection.query;
-  _db = connection;
+
+  const pool = mysql.createPool({
+    host: "localhost",
+    user: "root",
+    database: "altodb",
+    password: "altobeats123",
+  });
+
+  _db = pool;
   if (_db !== null) {
     return Promise.resolve(_db);
   }
