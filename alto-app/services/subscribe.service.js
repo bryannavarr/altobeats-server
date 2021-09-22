@@ -12,7 +12,6 @@ function create(email) {
       .db()
       .query("INSERT INTO emails SET email=?", email, function (err, result) {
         // if(error)   reject(error)
-        console.log('result: ' +JSON.stringify(result))
         err ? reject(err) : resolve(result.insertId);
       });
   });
@@ -26,12 +25,11 @@ function readByEmail(email) {
         "SELECT * FROM emails WHERE email=?",
         email,
         function (err, result) {
-          
-            if (result.length > 0) {
-              resolve(result);
-            } else {
-              resolve(false)
-            }
+          if (result && result.length > 0) {
+            resolve(result);
+          } else {
+            resolve(false);
+          }
         }
       );
   });

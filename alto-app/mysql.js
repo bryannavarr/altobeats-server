@@ -13,7 +13,7 @@ function connect(url) {
     host: "localhost",
     user: "root",
     database: "altodb",
-    password: "altobeats123",
+    password: process.env.DBPASS,
   });
 
   _db = pool;

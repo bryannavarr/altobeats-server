@@ -7,9 +7,9 @@ module.exports = {
 };
 
 function create(req, res) {
-  // console.log('req.body: ' +JSON.stringify(req.body))
-  subscribeService.readByEmail(req.body.email).then((data) => {
-
+  subscribeService
+    .readByEmail(req.body.email)
+    .then((data) => {
       if (data) {
         res.status(200).send("success");
       } else {
