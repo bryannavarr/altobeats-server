@@ -1,11 +1,13 @@
 const router = require("express").Router();
 const subscribeRoutes = require("./subscribe.routes");
+const marketingRoutes = require("./marketing.routes");
 const clientRoutes = require("./client.routes");
 
 module.exports = router;
 
 // API routes (group routing modules here - no empty lines between)
 router.use("/api/subscribe", subscribeRoutes);
+router.use("/api/marketing", marketingRoutes);
 
 // API error handlers (API routes must be registered before this)
 useAPIErrorHandlers(router);
