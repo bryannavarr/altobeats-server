@@ -21,6 +21,7 @@ function create(req, res) {
       }
     })
     .catch((err) => {
+      console.log("ERRR: " +JSON.stringify(error))
       res.status(500).send(new responses.ErrorResponse(err));
     });
 }

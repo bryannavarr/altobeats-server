@@ -1,13 +1,14 @@
 const responses = require("../models/responses");
-const subscribeService = require("../services/subscribe.service");
+const marketingService = require("../services/marketing.service");
 const apiPrefix = "/api/marketing";
 
 module.exports = {
-  create: create,
+  sendEmailBlast: sendEmailBlast,
 };
 
-function create(req, res) {
-  marketingService.create(req.body).then((response) => {
+function sendEmailBlast(req, res) {
+  marketingService.sendEmailBlast(req.body, (response) => {
+    console.log("response: " + JSON.stringify(response));
     const responseModel = new responses.ItemsResponse();
     responseModel.items = response;
     res.status(201).location(`${apiPrefix}`).json(responseModel);

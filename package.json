@@ -24,12 +24,15 @@
     "express": "^4.17.1",
     "express-session": "^1.15.6",
     "express-validator": "^6.4.0",
+    "fs": "0.0.1-security",
+    "handlebars": "^4.7.7",
     "joi": "^14.3.1",
     "joi-objectid": "^3.0.1",
     "mysql": "^2.18.1",
     "mysql2": "^2.1.0",
     "ngrok": "^3.2.7",
     "nodemailer": "^6.7.2",
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.16",
+    "path": "^0.12.7"
   }
 }

@@ -1,6 +1,6 @@
 class BaseResponse {
   constructor() {
-    this.isSuccessful = false;
+    this.success = false;
     this.alert = {
       message: null,
       type: null

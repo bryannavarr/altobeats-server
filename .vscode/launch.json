@@ -11,7 +11,7 @@
             "program": "${workspaceFolder}/alto.server.js",
             "request": "launch",
             "restart": true,
-            "runtimeExecutable": "nodemon",
+            "runtimeExecutable": "/Users/bryann/.nvm/versions/node/v14.19.1/bin/node",
             "skipFiles": [
                 "<node_internals>/**"
             ],

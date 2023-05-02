@@ -7,6 +7,7 @@ module.exports = {
 };
 
 function create(email) {
+  console.log(email)
   return new Promise(function (resolve, reject) {
     connection
       .db()

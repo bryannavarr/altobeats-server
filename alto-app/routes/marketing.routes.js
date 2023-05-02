@@ -1,6 +1,6 @@
 const router = require("express").Router();
-const marketingController = require("../controllers/subscribe.controller");
+const marketingController = require("../controllers/marketing.controller");
 
 module.exports = router;
 
-router.post("/", marketingController.create);
+router.post("/", marketingController.sendEmailBlast);
